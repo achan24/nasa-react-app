@@ -10,6 +10,11 @@ const Main = (props) => {
   if (isYouTubeLink) {
     const videoId = extractVideoId(data.url);
 
+    const onReady = (event) => {
+      event.target.mute();
+      event.target.playVideo();
+    };
+
     return (
       <div className="video-background">
         <div className="video-foreground">
@@ -26,6 +31,7 @@ const Main = (props) => {
                 playlist: videoId,
               },
             }}
+            onReady={onReady}
           />
         </div>
       </div>
