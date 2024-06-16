@@ -21,7 +21,7 @@ const Main = (props) => {
               playerVars: {
                 autoplay: 1,
                 controls: 0,
-                mute: 0,
+                mute: 1,
                 loop: 1,
                 playlist: videoId,
               },
