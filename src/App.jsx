@@ -27,6 +27,7 @@ function App() {
         const apiData = JSON.parse(localStorage.getItem(localKey))
         setData(apiData)
         console.log('Fetched from cache today')
+        console.log(apiData)
         return
       } //if we get past this - it means localStorage doesn't work
       localStorage.clear()
@@ -37,6 +38,7 @@ function App() {
         localStorage.setItem(localKey, JSON.stringify(apiData))
         setData(apiData)
         console.log('Fetched from API today')
+        console.log(apiData)
       } catch (error) {
         console.log(error.message)
       }
