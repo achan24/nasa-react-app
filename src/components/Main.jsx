@@ -25,7 +25,7 @@ const Main = (props) => {
               height: '100%',
               playerVars: {
                 autoplay: 1,
-                controls: 0,
+                controls: 1,
                 mute: 1,
                 loop: 1,
                 playlist: videoId,
